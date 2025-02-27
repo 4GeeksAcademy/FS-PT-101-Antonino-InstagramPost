@@ -1,8 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,100 +8,85 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+/* Estilos generales */
+body {
+  background-color: rgb(192, 192, 192);
+  font-family: Arial, sans-serif;
 }
-ol, ul {
-	list-style: none;
+
+.postal {
+  width: 95%; /* Ancho flexible */
+  max-width: 600px; /* Ancho máximo */
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  background-color: white;
 }
-blockquote, q {
-	quotes: none;
+
+.postal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+.postal__header-left {
+  display: flex;
+  align-items: center;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+.postal__header-left i {
+  margin-right: 10px;
 }
-body{
-    background-color: rgb(192, 192, 192);
+
+.postal__header-left-user-text h3, .postal__header-left-user-text p {
+  margin: 0;
+  font-size: 1em;
 }
-.postal{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.postal__header{
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 100%;
-}
+
 .fa-ellipsis-vertical {
-    padding-right: 15px;
-}
-.postal__header-left{
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    gap: 10px;
-}
-.postal__header-left-user-text b{
-    font-weight: bold;
+  padding-right: 15px;
 }
 
-.postal__footer{
-    padding-top: 15px;
-    background-color: white;
-}
-.postal__footer-icons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px;
-    padding-right: 15px;
-    padding-left: 15px
-}
-.postal__header-user{
-    margin-right: 5px;
+img {
+  width: 100%;
+  height: auto;
 }
 
-.postal__footer-text{
-    margin: 10px;
-    margin-top: 25px;
-    font-size: small;
+.postal__footer {
+  padding: 15px;
 }
-.postal__footer-icons-left{
-    display: flex;  
-    gap: 10px
+
+.postal__footer-icons {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px; /* Separación entre los íconos y el texto */
+  margin-top: 10px;
 }
-.postal__footer-text b{
-    font-weight: bold;
+
+.postal__footer-icons-left {
+  display: flex;
+  gap: 10px;
 }
-.postal__header-left-user-text{
-    font-size: 15px;
+
+.postal__footer-text h3, .postal__footer-text p {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.fa-heart, .fa-comment, .fa-paper-plane, .fa-bookmark {
+  font-size: 1.2em;
 }
